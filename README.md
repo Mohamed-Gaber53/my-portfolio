@@ -1,18 +1,55 @@
-# React + Vite
+Portfolio Website
+A modern and responsive portfolio website built with React and Vite.
+🚀 Features
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Responsive design
+Contact form with EmailJS integration
+Smooth animations
+Modern UI/UX
 
-Currently, two official plugins are available:
+🛠️ Technologies
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+React
+Vite
+EmailJS
+SweetAlert2
 
-## React Compiler
+🔗 **[Live Demo](https://mga-portfolio.netlify.app/)**
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
 
-Note: This will impact Vite dev & build performances.
 
-## Expanding the ESLint configuration
+📦 Installation
+bash# Clone the repository
+git clone <your-repo-url>
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+# Navigate to project directory
+cd portfolio
+
+# Install dependencies
+npm install
+⚙️ Configuration
+Create a .env file in the root directory:
+envVITE_API_KEY=your_emailjs_public_key
+🚀 Running the Project
+bash# Development mode
+npm run dev
+
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
+📧 Contact Form Setup
+
+Create an account on EmailJS
+Create an email service
+Create an email template
+Copy your Public Key to .env file
+Update service ID and template ID in Contact.jsx
+
+📝 License
+MIT
+👤 Author
+Mohamed Gaber
+
+⭐ Star this repo if you like it!
