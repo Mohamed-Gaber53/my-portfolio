@@ -1,0 +1,102 @@
+.hearo {
+  width: 100%;
+  color: $primary;
+  .hearo-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    padding-top: 7rem;
+
+    @media (max-width: 767px) {
+      flex-direction: column-reverse;
+    }
+    .title {
+      font-size: 3rem;
+      font-weight: 500;
+      margin-bottom: 2rem;
+      color: $primary-color;
+      @include slide-in(left, 0s, 0.8s);
+
+      @media (max-width: 767px) {
+        font-size: 2rem;
+        font-weight: 400;
+      }
+    }
+    .hearo-description {
+      font-size: 4rem;
+      font-weight: 600;
+      margin-bottom: 2rem;
+      @include slide-in(left, 0.3s, 1s);
+
+      @media (max-width: 767px) {
+        font-size: 2rem;
+        font-weight: 500;
+      }
+    }
+    .btns {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      .contact {
+        @include slide-in(bottom, 0.4s, 0.8s);
+      }
+      .resume {
+        @include slide-in(left, 0.4s, 1s);
+      }
+    }
+    .btn {
+      background-color: transparent;
+      padding: 0.9rem 1.25rem;
+      outline: none;
+      border-color: $secondary;
+      border-radius: 0.25rem;
+      cursor: pointer;
+      transition: 0.3s;
+
+      &:hover {
+        background-color: $secondary;
+      }
+      &:hover a {
+        color: $primary-color;
+      }
+      a {
+        color: $primary;
+      }
+      &.arrow {
+        border: none;
+        animation: bounce 1s infinite;
+        & a {
+          font-size: 1.75rem;
+          font-weight: 700;
+        }
+
+        &:hover {
+          background-color: transparent;
+        }
+      }
+    }
+  }
+  .img-container {
+    transition: 0.3s;
+    @media (max-width: 767px) {
+      margin-bottom: 2rem;
+    }
+    &:hover {
+      transform: scale(1.03);
+    }
+  }
+  img {
+    box-shadow: 0 15px 40px rgba(96, 165, 250, 0.2);
+    width: 100%;
+    max-width: 400px;
+    border-radius: 50%;
+    overflow: hidden;
+    object-fit: cover;
+    @include slide-in(right, 0.4s, 1s);
+
+    @media (max-width: 767px) {
+      max-width: 300px;
+    }
+  }
+}

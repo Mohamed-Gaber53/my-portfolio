@@ -1,0 +1,42 @@
+.navbar-container {
+  display: flex;
+  gap: 1.5rem;
+  flex-direction: column;
+  position: absolute;
+  right: 0;
+  top: 4rem;
+  background-color: $primary;
+  padding: 3rem 3rem 1rem 1rem;
+  border-radius: 0.5rem;
+  z-index: 999;
+  @media (min-width: 1199px) {
+    align-items: center;
+    flex-direction: row;
+    position: static;
+    padding: 0;
+    background-color: transparent;
+  }
+  .navbar-link {
+    color: $primary-color;
+    padding: 0.5rem;
+    font-size: 1.1rem;
+    position: relative;
+    transition: 0.5s ease;
+    &:hover::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0.5rem;
+      height: 2px;
+      width: calc(100% - 1rem);
+      background-color: $primary-color;
+      animation: width 0.5s ease forwards;
+    }
+    &:active {
+      color: $secondary-color;
+    }
+    @media (min-width: 1199px) {
+      font-size: 1.5rem;
+    }
+  }
+}

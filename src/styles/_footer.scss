@@ -1,0 +1,31 @@
+footer {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+
+  .footer-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: $primary-color;
+    flex-wrap: wrap;
+    padding: 1rem 2rem;
+    gap: 1rem;
+    @media (max-width: 600px) {
+      justify-content: center;
+    }
+  }
+}
+
+.social-links {
+  a {
+    font-size: 1.75rem;
+    margin-right: 1.5rem;
+    transition: 0.3s all ease;
+
+    .icon {
+      transition: 0.3s all ease;
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+}

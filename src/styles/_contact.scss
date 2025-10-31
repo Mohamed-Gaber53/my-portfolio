@@ -1,0 +1,96 @@
+.contact-section {
+  padding: 100px 0;
+  color: $secondary;
+  @media (max-width: 768px) {
+    padding: 60px 0;
+  }
+
+  .contact-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 1rem;
+    flex-wrap: wrap;
+    .title {
+      font-size: 2rem;
+      font-weight: 500;
+      color: $primary-color;
+      @media (max-width: 768px) {
+        font-size: 1.5rem;
+      }
+      span {
+        display: inline-block;
+        animation: arrow-bounce 1s infinite;
+      }
+    }
+    .contact-title {
+      opacity: 0;
+    }
+    form {
+      opacity: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      flex-direction: column;
+      padding: 2rem;
+      width: 500px;
+      max-width: 95%;
+      box-shadow: 0 15px 40px rgba(96, 165, 250, 0.2);
+
+      .input-box {
+        width: 100%;
+        label {
+          font-size: 1.2rem;
+        }
+        input {
+          padding: 0.75rem 0.5rem;
+          width: 80%;
+          border-radius: 2rem;
+          outline: none;
+          margin-left: 1rem;
+          font-size: 1rem;
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          @media (max-width: 768px) {
+            margin-top: 1rem;
+          }
+        }
+        textarea {
+          width: 20rem;
+          height: 10rem;
+          font-size: 1.2rem;
+          border-radius: 0.5rem;
+          outline: none;
+          margin-top: 1rem;
+          padding: 0.75rem 0.5rem;
+          @media (max-width: 768px) {
+            width: 15rem;
+          }
+        }
+      }
+      button {
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+        transition: 0.3s;
+        color: $primary-color;
+        &:hover {
+          transform: scale(1.2);
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+// Animation
+
+.contact-section.visible {
+  .contact-title {
+    @include slide-in(left, 0.4s, 0.8s);
+  }
+}
+.contact-section.visible {
+  form {
+    @include slide-in(right, 0.6s, 0.8s);
+  }
+}

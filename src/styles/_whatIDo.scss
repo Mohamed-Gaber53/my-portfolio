@@ -1,0 +1,101 @@
+.what-i-do-section {
+  padding: 100px 0;
+  color: $primary;
+  @media (max-width: 768px) {
+    padding: 60px 0;
+  }
+  .what-i-do-header {
+    margin-bottom: 2rem;
+    opacity: 0;
+  }
+  .what-i-do-title {
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    @media (max-width: 768px) {
+      font-size: 1rem;
+    }
+  }
+  .what-i-do-subtitle {
+    color: $primary-color;
+  }
+}
+
+.what-i-do-heading {
+  margin-bottom: 3rem;
+  text-align: center;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #60a5fa, #a78bfa);
+    border-radius: 2px;
+  }
+  .heading-text {
+    font-size: 1.9rem;
+    font-weight: 600;
+  }
+}
+.ideas-flex {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  .idea-card {
+    opacity: 0;
+    width: 300px;
+    max-width: 95%;
+    height: 350px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    &:hover {
+      transform: translateY(-5px);
+      border-color: rgba(96, 165, 250, 0.3);
+      box-shadow: 0 15px 40px rgba(96, 165, 250, 0.2);
+    }
+  }
+  .idea-card-title {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: $primary-color;
+    margin-bottom: 1rem;
+  }
+  .idea-card-content {
+    line-height: 1.6;
+  }
+}
+
+// Animation
+
+$skills: 3;
+
+.visible {
+  .idea-card {
+    @include slide-in(right, 0.4s, 0.8s);
+    @for $i from 1 through $skills {
+      &:nth-child(#{$i}) {
+        animation-delay: #{$i * 0.16}s;
+      }
+    }
+  }
+}
+.visible {
+  .what-i-do-header {
+    opacity: 0;
+    @include slide-in(left, 0.2s, 0.8s);
+  }
+}
