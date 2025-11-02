@@ -10,7 +10,7 @@ function Hero() {
           <p className="hearo-description">FrontEnd React Developer</p>
           <div className="btns">
             <button className="btn resume">
-              <a target="_blank" href="https://drive.google.com/file/d/1im4wMaNFnmpbJDQ69NjJfw6Wnz-_QSWe/view?usp=sharing">View My Resume</a>
+              <a target="_blank" href="https://drive.google.com/file/d/1pSmuD55a9D13jZKyql0KYM6RcMwGc-l8/view?usp=sharing">View My Resume</a>
             </button>
             <button className="btn contact">
               <a href="#contact">Contact Me</a>
@@ -33,5 +33,6 @@ function Hero() {
 }
 
 export default React.memo(Hero);
+
 
 
